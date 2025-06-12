@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Now - Baker's Lane</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <link rel="stylesheet" href="Order-now.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="form-wrapper">
+    <h1>Place Your Order</h1>
+    
+    <form id="orderForm" action="https://formspree.io/f/xanjnvpo" method="POST">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="item">Select Item:</label>
+      <select id="item" name="item" required>
+        <option value="">-- Choose an item --</option>
+        <option value="cakes">Cakes</option>
+        <option value="breads">Breads</option>
+        <option value="beverages">Beverages</option>
+        <option value="specials">Specials</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="subitem">Select Specific Item:</label>
+      <select id="subitem" name="subitem" required>
+      <option value="">-- Select an option above first --</option>
+      </select>
+
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" required>
+
+      <label for="pickup">Pickup Date:</label>
+      <input type="date" id="pickup" name="pickup" required>
+
+      <label for="notes">Additional Notes:</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Any special instructions?"></textarea>
+      <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you.html">
+
+      <!-- Anti-spam hidden field -->
+      <input type="text" name="_honey" style="display:none">
+
+      <!-- Redirect after submit -->
+      
+
+      <button type="submit">Place Order</button>
+    </form>
+  </main>
+  <!--  Popup Element -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Thank you!</h2>
+      <p>Your order has been placed successfully.</p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+  <!--  Script at the bottom before </body> -->
+  
+  <script>
+  const form = document.getElementById("orderForm");
+  const popup = document.getElementById("popup");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      form.reset();
+      popup.style.display = "flex";
+    } else {
+      alert("There was a problem submitting your order.");
+    }
+
+    // ✅ Move console.log inside async block, after checking response
+    const text = await response.text();
+    console.log(text);
+  });
+
+  function closePopup() {
+    popup.style.display = "none";
+  }
+
+  // ✅ Subitem handling
+  const itemSelect = document.getElementById("item");
+  const subitemSelect = document.getElementById("subitem");
+  const subitemLabel = document.querySelector('label[for="subitem"]');
+
+  const optionsMap = {
+    cakes: ["Chocolate Truffle Cake", "Red Velvet Cheesecake", "Black Forest Gateau", "Vanilla Bean Sponge", "Blueberry Muffin Cake", "Ferrero Rocher Cake", "Carrot Walnut Cake", "Lemon Drizzle Cake"],
+    breads: ["Garlic Breadsticks", "Sourdough Breads", "Multigrain Loaf", "Brioche Bun", "Focaccia with Herbs", "Ciabatta Roll", "Plain Bagel","Cheese & Jalapeño", "Banana Bread", "Pita Bread" ],
+    beverages: ["Iced Americano", "Hot Chocolate", "Indian Masala Chai", "Cold Brew with Vanilla", "Strawberry Smoothie", "Mocha Frappe", "Sparkling Citrus Mint"],
+    specials: ["Spinach & Cheese Puff", "Paneer Tikka Roll", "Veg Quiche Slice","Cheesy Corn Toast", "Mushroom Herb Tart", "Mini Pizza Buns", "Herbed Potato Wedges"],
+    other: ["Custom Request"]
+  };
+
+  // ✅ Initially hide subitem dropdown and label
+  subitemSelect.style.display = "none";
+  subitemLabel.style.display = "none";
+
+  itemSelect.addEventListener("change", function () {
+    const selected = this.value;
+    const subitems = optionsMap[selected] || [];
+
+    // Clear existing options
+    subitemSelect.innerHTML = '<option value="">-- Choose --</option>';
+
+    // Add new options
+    subitems.forEach(sub => {
+      const option = document.createElement("option");
+      option.value = sub;
+      option.textContent = sub;
+      subitemSelect.appendChild(option);
+    });
+
+    // ✅ Show/hide subitem dropdown and label
+    const show = subitems.length > 0;
+    subitemSelect.style.display = show ? "block" : "none";
+    subitemLabel.style.display = show ? "block" : "none";
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,411 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('BakersLaneIcons/menu2.jpg') center/cover no-repeat fixed;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+/*Nav-bar and side menu*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 1001;
+  background: linear-gradient(to bottom, black, transparent);
+}
+
+.logo {
+  margin: 0;
+  color: white;
+  font-size: 50px;
+  z-index: 999;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.4);
+  transition: text-shadow 0.4s ease;
+  font-family: 'Lavishly Yours', cursive;
+}
+
+.logo:hover {
+  text-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
+}
+
+.navbar, .dropdown {
+  display: flex;
+  gap: 1rem;
+  font-family: sans-serif;
+}
+
+.navbar {
+  margin-right: 1rem;
+}
+
+.nav-link, .dropdown a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar a{
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #f2b300;
+}
+
+.dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  z-index: 1000;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.dropdown a:hover {
+  text-decoration: underline;
+}
+
+.menubutton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.menu a, .ordernow1 {
+  padding: 15px 20px;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-family: 'Times New Roman', serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu a:hover, .ordernow1:hover {
+  background-color: rgba(137, 151, 151, 0.44);
+}
+
+/*carousel*/
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 1rem;
+  padding-left: 0;
+  margin: 80px 10% 180px 70px;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  width: 250px;
+  margin: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+}
+
+.carousel-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.carousel-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.carousel-section {
+  margin: 100px 0 0 100px;
+  padding-top: 90px;
+}
+
+.carousel-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text1 {
+  font-size: 18px;
+  padding: 5px 10px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.section-heading {
+  font-size: 30px;
+  color: white;
+  padding-left: 198px;
+  position: relative;
+  top: 40px;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.popup-content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow: auto;
+  border-radius: 12px;
+  z-index: 2;
+  text-align: center;
+}
+
+.popup-content img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.popup-content p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 3;
+}
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.95em;
+  font-family: sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+footer ul {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.no-bullets {
+  list-style-type: none;
+}
+
+.no-bullets a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.no-bullets a:hover {
+  color: #f2b300;
+}
+
+footer form {
+  margin-top: 10px;
+}
+
+footer input[type="email"] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+footer button {
+  padding: 8px 15px;
+  background-color: #f2b300;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+footer button:hover {
+  background-color: #d6a100;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .carousel-item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+
+  }
+  .carousel-item img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .menu a, .ordernow1 {
+    text-align: left; 
+  }
+  .menu {
+    width: 150px;
+  }
+  .section-heading {
+    padding-left: 130px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel {
+    margin: 80px 10% 180px 15%;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    display: none;
+  }
+  .menubutton {
+    display: block;
+  }
+  .ordernow {
+    display: none;
+  }
+}
+
+@media (min-width: 801px) {
+  .menubutton {
+    display: none;
+  }
+}
+
+/*Pre-loader*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  background-color: #fff8e1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  transition: opacity 0.6s ease;
+}
+
+.svg-loader svg {
+  width: 80px;
+  height: 80px;
+}
+
+.load-text {
+  font-family: 'Dancing script', cursive;
+  color: #b87a4b;
+  font-size: 22px;
+  margin-top: 12px;
+  animation: fadeIn 1.2s ease infinite alternate;
+}
+@keyframes fadeIn {
+  from {opacity: 0.5;}
+  to {opacity: 1;}
+}
+
+main, .menu, .header, footer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.loaded main,
+.loaded .menu,
+.loaded .header,
+.loaded footer {
+  opacity: 1;
+  transform: translateY(0);
+}

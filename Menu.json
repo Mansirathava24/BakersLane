@@ -1,0 +1,262 @@
+{
+    "cakes": [
+        {
+      "id": "chocolatecake1", "img": "BakersLaneIcons/Chocolate-Truffle-Cake.jpg", "alt": "Chocolate Truffle Cake", "name": "Chocolate Truffle Cake", "desc": "Rich dark chocolate layers with creamy ganache.", "price": "Price : &#8377;180/slice"
+    },
+    {
+      "id": "chocolatecake2",
+      "img": "BakersLaneIcons/Red-Velvet-Cheesecake.jpg",
+      "alt": "Red Velvet Cheesecake",
+      "name": "Red Velvet Cheesecake",
+      "desc": "A smooth cream cheese layer over moist red velvet.",
+      "price": "Price : &#8377;220/slice"
+    },
+    {
+      "id": "chocolatecake3",
+      "img": "BakersLaneIcons/black-Forest-Gateau.jpg",
+      "alt": "Black Forest Gateau",
+      "name": "Black Forest Gateau",
+      "desc": "Classic German dessert with cherries and whipped cream.",
+      "price": "Price : &#8377;160/slice"
+    },
+    {
+      "id": "chocolatecake4",
+      "img": "BakersLaneIcons/Vanilla-Bean-Sponge.jpg",
+      "alt": "Vanilla Bean Sponge",
+      "name": "Vanilla Bean Sponge",
+      "desc": "Light and fluffy with real vanilla bean specks.",
+      "price": "Price : &#8377;140/slice"
+    },
+    {
+      "id": "chocolatecake5",
+      "img": "BakersLaneIcons/Blueberry-Muffin.jpg",
+      "alt": "Blueberry Muffin",
+      "name": "Blueberry Muffin Cake",
+      "desc": "Muffin-style cake packed with blueberries.",
+      "price": "Price : &#8377;160/slice"
+    },
+    {
+      "id": "chocolatecake6",
+      "img": "BakersLaneIcons/Ferraro-Rocher-Cake.jpg",
+      "alt": "Ferrero Rocher Cake",
+      "name": "Ferrero Rocher Cake",
+      "desc": "Hazelnut-chocolate layers topped with Ferrero Rocher.",
+      "price": "Price : &#8377;250/slice"
+    },
+    {
+      "id": "chocolatecake7",
+      "img": "BakersLaneIcons/Carrot-Walnut-Cake.jpg",
+      "alt": "Carrot Walnut Cake",
+      "name": "Carrot Walnut Cake",
+      "desc": "Spiced carrot cake with toasted walnuts.",
+      "price": "Price : &#8377;170/slice"
+    },
+    {
+      "id": "chocolatecake8",
+      "img": "BakersLaneIcons/Lemon-Drizzle-Cake.jpg",
+      "alt": "Lemon Drizzle Cake",
+      "name": "Lemon Drizzle Cake",
+      "desc": "Zesty lemon sponge with a tangy glaze.",
+      "price": "Price : &#8377;150/slice"
+    }
+    ],
+
+    "breads": [
+    {
+      "id": "bread1",
+      "img": "BakersLaneIcons/Garlic-Breadsticks.jpg",
+      "alt": "Garlic Breadsticks",
+      "name": "Garlic Breadsticks",
+      "desc": "Buttery, soft, and topped with roasted garlic",
+      "price": "Price : &#8377;90"
+    },
+    {
+      "id": "bread2",
+      "img": "BakersLaneIcons/Sourdough-Breads.jpg",
+      "alt": "Sourdough Breads",
+      "name": "Sourdough Breads",
+      "desc": "Naturally fermented with a crusty edge and chewy inside",
+      "price": "Price : &#8377;120"
+    },
+    {
+      "id": "bread3",
+      "img": "BakersLaneIcons/Multigrain-Loaf.jpg",
+      "alt": "Multigrain Loaf",
+      "name": "Multigrain Loaf",
+      "desc": "Hearty bread made with 7 wholesome grains.",
+      "price": "Price : &#8377;120"
+    },
+    {
+      "id": "bread4",
+      "img": "BakersLaneIcons/Brioche-Bun.jpg",
+      "alt": "Brioche Bun",
+      "name": "Brioche Bun",
+      "desc": "Soft, golden, and slightly sweet French-style buns.",
+      "price": "Price : &#8377;80 (2 pcs)"
+    },
+    {
+      "id": "bread5",
+      "img": "BakersLaneIcons/Focaccia-With-Herbs.jpg",
+      "alt": "Focaccia with Herbs",
+      "name": "Focaccia with Herbs",
+      "desc": "Olive oil-rich bread topped with rosemary and sea salt.",
+      "price": "Price : &#8377;110"
+    },
+    {
+      "id": "bread6",
+      "img": "BakersLaneIcons/Ciabatta-Roll.jpg",
+      "alt": "Ciabatta Roll",
+      "name": "Ciabatta Roll",
+      "desc": "Rustic Italian rolls with a crisp crust and airy center",
+      "price": "Price : &#8377;100 (2 pcs)"
+    },
+    {
+      "id": "bread7",
+      "img": "BakersLaneIcons/Plain-Bagel.jpg",
+      "alt": "Plain Bagel",
+      "name": "Plain Bagel",
+      "desc": "Dense and chewy New York-style bagels.",
+      "price": "Price : &#8377;90 (2 pcs)"
+    },
+    {
+      "id": "bread8",
+      "img": "BakersLaneIcons/Cheese-&-Jalapeño-Bread.jpg",
+      "alt": "Cheese & Jalapeño Bread",
+      "name": "Cheese & Jalapeño Bread",
+      "desc": "Cheesy bread with a spicy kick.",
+      "price": "Price : &#8377;140"
+    },
+    {
+      "id": "bread9",
+      "img": "BakersLaneIcons/Banana-Bread.jpg",
+      "alt": "Banana Bread",
+      "name": "Banana Bread",
+      "desc": "Moist and sweet, made with ripe bananas.",
+      "price": "Price : &#8377;100/slice"
+    },
+    {
+      "id": "bread10",
+      "img": "BakersLaneIcons/Pita-Bread.jpg",
+      "alt": "Pita Bread",
+      "name": "Pita Bread",
+      "desc": "Soft, pocket-style flatbreads      perfect for dips",
+      "price": "Price : &#8377;80 (4 pcs)"
+    }
+  ],
+  "beverages": [
+    {
+      "id": "beverage1",
+      "img": "BakersLaneIcons/Iced-Americano.jpg",
+      "alt": "Iced Americano",
+      "name": "Iced Americano",
+      "desc": "Bold espresso over ice for a cool caffeine fix.",
+      "price": "Price : &#8377;120"
+    },
+    {
+      "id": "beverage2",
+      "img": "BakersLaneIcons/Hot-Chocolate.jpg",
+      "alt": "Hot Chocolate",
+      "name": "Hot Chocolate",
+      "desc": "Creamy and rich, topped with whipped cream.",
+      "price": "Price : &#8377;130"
+    },
+    {
+      "id": "beverage3",
+      "img": "BakersLaneIcons/Indian-Masala-Chai.jpg",
+      "alt": "Indian Masala Chai",
+      "name": "Indian Masala Chai",
+      "desc": "Indian spiced tea with milk and aromatic herbs.",
+      "price": "Price : &#8377;90"
+    },
+    {
+      "id": "beverage4",
+      "img": "BakersLaneIcons/Cold-Brew-with-Vanilla.jpg",
+      "alt": "Cold Brew with Vanilla",
+      "name": "Cold Brew with Vanilla",
+      "desc": "Smooth cold brew with a hint of vanilla syrup.",
+      "price": "Price : &#8377;90"
+    },
+    {
+      "id": "beverage5",
+      "img": "BakersLaneIcons/Strawberry-Smoothie.jpg",
+      "alt": "Stawberry Smoothie",
+      "name": "Stawberry Smoothie",
+      "desc": "Fresh strawberries blended with yogurt and honey.",
+      "price": "Price : &#8377;150"
+    },
+    {
+      "id": "beverage6",
+      "img": "BakersLaneIcons/Mocha-Frappe.jpg",
+      "alt": "Mocha Frappe",
+      "name": "Mocha Frappe",
+      "desc": "Chocolate and espresso blended with ice.",
+      "price": "Price : &#8377;160"
+    },
+    {
+      "id": "beverage7",
+      "img": "BakersLaneIcons/Sparkling-Citrus-Mint.jpg",
+      "alt": "Sparkling Citrus Mint",
+      "name": "Sparkling Citrus Mint",
+      "desc": "Zesty citrus meets crisp mint in a sparkling, refreshing blend.",
+      "price": "Price : &#8377;110"
+    }
+  ],
+  "specials": [
+    {
+      "id": "special1",
+      "img": "BakersLaneIcons/Spinach-&-Cheese-Puff.jpg",
+      "alt": "Spinach & Cheese Puff",
+      "name": "Spinach & Cheese Puff",
+      "desc": "Flaky pastry filled with creamy cheese and savory spinach.",
+      "price": "Price : &#8377;90"
+    },
+    {
+      "id": "special2",
+      "img": "BakersLaneIcons/Paneer-Tikka-Roll.jpg",
+      "alt": "Paneer Tikka Roll",
+      "name": "Paneer Tikka Roll",
+      "desc": "Soft wrap stuffed with grilled paneer, onions, and spiced mayo.",
+      "price": "Price : &#8377;140"
+    },
+    {
+      "id": "special3",
+      "img": "BakersLaneIcons/Veg-Quiche-Slice.jpg",
+      "alt": "Veg Quiche Slice",
+      "name": "Veg Quiche Slice",
+      "desc": "Buttery tart filled with vegetables and cheesy egg custard.",
+      "price": "Price : &#8377;130"
+    },
+    {
+      "id": "special4",
+      "img": "BakersLaneIcons/Cheesy-Corn-Toast.jpg",
+      "alt": "Cheesy Corn Toast",
+      "name": "Cheesy Corn Toast",
+      "desc": "Toasted bread topped with sweet corn, cheese, and herbs.",
+      "price": "Price : &#8377;120"
+    },
+    {
+      "id": "special5",
+      "img": "BakersLaneIcons/Mushroom-&-Herb-Tart.jpg",
+      "alt": "Mushroom & Herb Tart",
+      "name": "Mushroom & Herb Tart",
+      "desc": "Savory tart filled with sautéed mushrooms and thyme.",
+      "price": "Price : &#8377;150"
+    },
+    {
+      "id": "special6",
+      "img": "BakersLaneIcons/Mini-Pizza-Buns.jpg",
+      "alt": "Mini Pizza Buns",
+      "name": "Mini Pizza Buns",
+      "desc": "Soft buns topped with tangy pizza sauce, cheese, and veggies.",
+      "price": "Price : &#8377;110 (2 pcs)"
+    },
+    {
+      "id": "special7",
+      "img": "BakersLaneIcons/Herbed-Potato-Wedges.jpg",
+      "alt": "Herbed Potato Wedges",
+      "name": "Herbed Potato Wedges",
+      "desc": "Crispy baked wedges tossed in herbs and garlic seasoning.",
+      "price": "Price : &#8377;100"
+    }
+  ]
+}

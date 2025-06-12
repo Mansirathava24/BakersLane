@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baker's Lane</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lavishly+Yours&family=Yellowtail&display=swap" rel="stylesheet" />
+  <script>
+    function togglemenu() {
+      const dropdown = document.getElementById('dropdownmenu');
+      const overlay = document.getElementById('overlay');
+      const isVisible = dropdown.style.display === 'flex';
+      dropdown.style.display = isVisible ? 'none' : 'flex';
+      overlay.style.display = isVisible ? 'none' : 'block';
+    }
+
+    function closeMenu() {
+      document.getElementById('dropdownmenu').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      preloader.style.opacity = '0';
+      preloader.style.pointerEvents = 'none';
+      setTimeout(() => preloader.remove(), 600);
+    });
+  </script>
+</head>
+<body>
+  <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+  <div class="page-content">
+    <img class="bg-img" src="BakersLaneIcons/bread-6486963.jpg" alt="Background image" />
+
+    <div id="overlay" onclick="closeMenu()" style="display:none;"></div>
+
+    <div class="header">
+      <div class="logo">Baker's Lane</div>
+      <div class="navbar">
+        <a class="nav-link" href="Index.html">Home</a>
+        <a class="nav-link" href="Menu.html">Menu</a>
+        <a class="nav-link" href="About.html">About</a>
+        <a class="nav-link" href="Testimonials.html">Testimonials</a>
+        <a class="nav-link" href="Connect.html">Connect</a>
+      </div>
+      <a class="ordernow" href="Order-now.html">Order Now</a>
+      <button class="menubutton" onclick="togglemenu()">
+        <img src="BakersLaneIcons/Hamburger.svg" alt="menu" />
+      </button>
+
+      <div class="dropdown" id="dropdownmenu">
+        <a href="Index.html">Home</a>
+        <a href="Menu.html">Menu</a>
+        <a href="About.html">About</a>
+        <a href="Testimonials.html">Testimonials</a>
+        <a href="Connect.html">Connect</a>
+        <a href="Order-now.html">Order Now</a>
+      </div>
+    </div>
+
+    <div class="text">
+      <h1 class="heading">Freshly Baked Happiness.</h1>
+      <h2 class="subheading">Delight in every bite, made with love</h2>
+      <button class="menu" onclick="window.location.href='Menu.html'">Explore Menu</button>
+      <p class="note"><strong>Note: </strong>This is a mock portfolio created for demonstration purposes only. It is not an official or live website.</p>
+
+    </div>
+    
+    <div id="preloader">
+      <div class="svg-loader">
+        <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="45" stroke="#b87a4b" stroke-width="5" opacity="0.2" />
+          <path d="M50 5 A45 45 0 0 1 95 50" stroke="#b87a4b" stroke-width="5" stroke-linecap="round">
+            <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="1s" repeatCount="indefinite" />
+          </path>
+        </svg>
+        <p class="load-text">Whipping up something sweet...</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="font">
+      <ul class="no-bullets">
+        <li><a href="Baker's Lane.html">Home</a></li>
+        <li><a href="Menu - Baker's Lane.html">Menu</a></li>
+        <li><a href="About Us - Baker's Lane.html">About Us</a></li>
+        <li><a href="Testimonials - Baker's Lane.html">Testimonials</a></li>
+        <li><a href="Connect - Baker's Lane.html">Connect</a></li>
+      </ul>
+      <p>Email: <span style="color: yellow;">bakerslane@example.com</span></p>
+      <p>Phone: +91-9876543210</p>
+      <p>Location: Ahmedabad, India</p>
+      <form action="https://formspree.io/f/xnnvnwgn" method="POST">
+        <input type="email" name="email" placeholder="Subscribe for updates" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <p>&copy; 2025 Baker's Lane. All rights reserved. This is a mock portfolio site for demonstration purposes only.</p>
+  </footer>
+  <script>
+    function togglemenu() {
+      const dropdown = document.getElementById('dropdownmenu');
+      const overlay = document.getElementById('overlay');
+      const isVisible = dropdown.style.display === 'flex';
+
+      dropdown.style.display = isVisible ? 'none' : 'flex';
+      overlay.style.display = isVisible ? 'none' : 'block';
+      }
+
+    function closeMenu() {
+      document.getElementById('dropdownmenu').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+      }
+  </script>
+</body>
+</html>

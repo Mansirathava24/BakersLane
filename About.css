@@ -1,0 +1,281 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 999;
+}
+
+html, body {
+    height: 100%;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.photo:first-child .overlay-text {
+  top: calc(50% + 40px); 
+}
+
+.text {
+  position: absolute;
+  top: calc(50% + 40px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  max-width: 80%;
+  z-index: 1000;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+  text-shadow: 1px 1px 5px #000;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+  /* Nav-bar*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  z-index: 1001;
+    background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+    background: linear-gradient(to bottom, black, transparent);
+
+}
+.logo {
+  position: relative;
+    margin-top: 0;
+    color: white;
+    font-size: 50px;
+    font-family: 'Lavishly Yours', cursive;
+    text-shadow: 0 0 8px rgba(255,204,0,0.5);
+    transition: text-shadow 0.3s ease;
+}
+.logo:hover {
+  text-shadow: 0 0 16px rgba(255,204,0,0.8);
+}
+.navbar {
+    color: white;
+    text-decoration: none;
+    display:inline-flex;
+    gap: 1rem;
+    margin-right: 1rem;
+    position: relative;
+
+  gap: 10%;
+  justify-content: center;
+    font-family:sans-serif;
+  font-weight: 100;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color: #f2b300;
+}
+.dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+    top: 60px; 
+  right: 10px;
+  z-index: 1000;
+    background-color: rgba(0,0,0,0.8);
+  border-radius: 10px;
+  padding: 10px;
+}
+.dropdown a{
+  text-decoration: none;
+    color: white;
+  padding: 0.5em 1em;
+  font-family: sans-serif;
+  z-index: 1002;
+}
+.dropdown a:hover {
+  text-decoration: underline;
+}
+.menubutton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+}
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  display: none;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 800px){
+  .navbar {
+    display: none;
+  }
+  .menubutton {
+    display: block;
+  }
+}
+@media screen and (min-width: 801px) {
+  .menubutton {
+    display: none;
+  }
+}
+@media screen and (max-width: 850px) {
+  .text {
+    font-size: 1.2em;
+    padding: 10px;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text {
+    font-size: 1em;
+    padding: 8px;
+    max-width: 95%;
+  }
+}
+
+/*Footer*/
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.95em;
+  font-family: sans-serif;
+  position: relative;
+  z-index: 1000;
+}
+
+footer ul {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.no-bullets {
+  list-style-type: none;
+}
+
+.no-bullets a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.no-bullets a:hover {
+  color: #f2b300;
+}
+
+footer form {
+  margin-top: 10px;
+}
+
+footer input[type="email"] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+footer button {
+  padding: 8px 15px;
+  background-color: #f2b300;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+footer button:hover {
+  background-color: #d6a100;
+}
+
+/*Pre-loader*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  background-color: #fff8e1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  transition: opacity 0.6s ease;
+}
+
+.svg-loader svg {
+  width: 80px;
+  height: 80px;
+}
+
+.load-text {
+  font-family: 'Dancing Script', cursive;
+  color: #b87a4b;
+  font-size: 22px;
+  margin-top: 12px;
+  animation: fadeIn 1.2s ease infinite alternate;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0.5;}
+  to {opacity: 1;}
+}
