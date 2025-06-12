@@ -1,6 +1,5 @@
 # BakersLane
 My first front-end project – a mock bakery website built with HTML, CSS, and JavaScript.
-# BakersLane
 
 **BakersLane** is a beginner-friendly, fully responsive bakery website built using **HTML, CSS, and JavaScript**. It showcases a bakery's products, testimonials, and contact options with a clean design and smooth user experience.
 
