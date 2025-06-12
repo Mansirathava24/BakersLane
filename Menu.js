@@ -1,5 +1,5 @@
 /*Fetch and render all categories*/
-fetch('menu.json')
+fetch('https://mansirathava24.github.io/BakersLane/Menu.json')
   .then(res => res.json())
   .then(data => {
     const categories = {
