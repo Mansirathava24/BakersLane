@@ -85,13 +85,12 @@ html, body {
   align-items: center;
   padding: 1rem 2rem;
   position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
+  left: 0;
+  right: 0;
+  top: 0;
   z-index: 1001;
-    background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-    background: linear-gradient(to bottom, black, transparent);
+  background: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(to bottom, black, transparent);
 
 }
 .logo {
